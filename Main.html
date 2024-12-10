@@ -1,0 +1,189 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+
+
+
+@font-face {
+    font-family: Yorkbook Xe;
+    font-weight:400;
+    src:url('yorkbook-xe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Yorkbook Xe Mono;
+    font-weight:400;
+    src:url('yorkbook-xe-mono.ttf') format('truetype');
+}
+
+
+
+	.hidein-nvf {
+		display:none;
+	}
+	.hidein-ncp {
+		display:none;
+	}
+	.hidein-vf {
+		display:block;
+	}
+@supports (font-variation-settings: "wdth" 115) {
+	.hidein-nvf {
+		display:block;
+	}
+	.hidein-vf {
+		display:none;
+	}
+}
+
+@supports (font-palette: normal) {
+	.hidein-ncp {
+		display:block;
+	}
+}
+
+
+* {
+  font-family:Yorkbook Xe, casual;
+  accent-color:green;
+  color-scheme:light dark;
+}
+
+[type='mono'] * {
+  font-family:Yorkbook Xe Mono, casual;
+}
+      
+      h1,h2,h3,h4,h5,h6 {
+        line-height:1.5!important;
+        margin:8px 0;
+      }
+      textarea {
+        line-height:normal;
+        transition:color 100ms ease-in-out 20ms;
+      }
+      body {
+              margin:0 8px;
+      }
+     body, code, input {
+        line-height:2;
+      }
+      code {
+        border:3px solid green;
+        color:green;
+        padding:10px;
+        display:block;
+      }
+      textarea {
+        font-size:24px;
+        display:block;
+        width:100%;
+        color:green;
+        border-radius:0;
+        -webkit-appearance:none;
+        border:0;
+        border-top:2px solid red;
+        border-bottom:2px solid green;
+        height:200px;
+        padding:0 0 10px;
+        overflow-y:auto;
+        caret-color:orange;
+      }
+      textarea:focus {
+        color:blue;
+      }
+      textarea:placeholder-shown {
+        color:rgba(0,0,0,0.6);
+        opacity:1;
+      }
+      textarea:-ms-input-placeholder {
+        color:rgba(0,0,0,0.6);
+        opacity:1;
+      }
+      textarea::-moz-placeholder {
+        color:rgba(0,0,0,0.6);
+        opacity:1;
+      }
+      textarea::-webkit-input-placeholder {
+        color:rgba(0,0,0,0.6);
+        opacity:1;
+      }
+      textarea::placeholder {
+        color:rgba(0,0,0,0.6);
+        opacity:1;
+      }
+
+	@media (prefers-color-scheme:dark) {
+      * {
+		accent-color:lime;
+      }
+      code {
+        border-color:lime;
+        color:lime;
+	  }
+      textarea {
+        color:lime;
+        caret-color:yellow;
+        border-top-color:magenta;
+        border-bottom-color:lime;
+      }
+      textarea:focus {
+        color:aqua;
+      }
+
+      textarea:placeholder-shown {
+        color:rgba(255,255,255,0.6);
+        opacity:1;
+      }
+      textarea:-ms-input-placeholder {
+        color:rgba(255,255,255,0.6);
+        opacity:1;
+      }
+      textarea::-moz-placeholder {
+        color:rgba(255,255,255,0.6);
+        opacity:1;
+      }
+      textarea::-webkit-input-placeholder {
+        color:rgba(255,255,255,0.6);
+        opacity:1;
+      }
+      textarea::placeholder {
+        color:rgba(255,255,255,0.6);
+        opacity:1;
+      }
+
+	}
+	
+	button[onclick] {
+		width: 70%;
+		margin: 0 auto 20px;
+		display: block;
+		font-size: 2em;
+	}
+    </style>
+    <script>
+	function Switch(item='serif') {
+		var x = document.querySelector('html');
+		x.setAttribute('type',item)
+	}
+    </script>
+  </head>
+  <body>
+  <h2>Welcome To the Yorkbook Universe</h2>
+	<div style="display:flex;">
+		<button onclick="Switch('serif')" style="font-family:Yorkbook Xe, casual;">Serif Font</button>
+		<button onclick="Switch('mono')" style="font-family:Yorkbook Xe Mono, casual;">Monospace Font</button>
+	</div>
+    <code>
+Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. 
+    </code>
+
+    <h3>Test it</h3>
+      Just write some text into the textarea to test it:
+      <textarea placeholder="Write something here..."></textarea>
+    <h3>Use it on your documents</h3>
+      Just download the repository to your PC, find the yorkbook-xe.ttf yorkbook-xe-mono.ttf fonts and install them
+     <h1 style="text-align:right">Powered by A Techno Services</h1>
+</body>
+</html>
